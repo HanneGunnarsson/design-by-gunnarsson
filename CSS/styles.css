@@ -1,0 +1,136 @@
+:root {
+  background-color: black;
+  color: white;
+  font-style: normal;
+}
+
+a {
+  font-family: ff-dax-pro-wide, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a:hover {
+  color: palevioletred;
+}
+
+.hamburger-icon {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.hamburger-icon :hover {
+  color: palevioletred;
+  font-size: 2rem;
+  transition: 1s;
+}
+
+nav,
+#menu-checkbox {
+  display: none;
+  padding: 20px 16px;
+  font-size: 30px;
+}
+
+nav {
+  position: absolute;
+  background: palevioletred;
+  width: 120px;
+  height: 250px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
+
+.header {
+  height: 90px;
+}
+
+.main-image {
+  grid-area: main-image;
+  background-image: url(../images/top-section-image.png);
+  background-size: cover;
+
+  height: 600px;
+}
+
+.middle-section {
+  grid-area: middle;
+  height: 400px;
+}
+
+h1 {
+  font-family: ff-dax-pro, sans-serif;
+  font-weight: 900;
+  margin: 50px;
+}
+
+p {
+  font-family: ff-dax-pro-wide, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "main-image main-image main-image main-image"
+    "middle middle middle middle"
+    "footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.copyright-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav {
+    display: inline-block;
+    background: none;
+    overflow: hidden;
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  nav a {
+    float: right;
+    text-decoration: none;
+    padding: 15px;
+  }
+
+  .middle-section p {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
